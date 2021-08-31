@@ -1,0 +1,17 @@
+#!/bin/sh
+
+ZSH_CONFIG_DIR=$(cd $(dirname $0); pwd)
+
+if [ -f $HOME/.zshenv ] && [ ! -h $HOME/.zshenv ]; then
+  echo "backup to $HOME/.zshenv.bak"
+  mv $HOME/.zshenv $HOME/.zshenv.bak
+fi
+ln -sf "$ZSH_CONFIG_DIR"/.zshenv $HOME/.zshenv
+
+if [ -d $HOME/.config/zsh ] && [ ! -h $HOME/.config/zsh ]; then
+  echo "backup to $HOME/.config/zsh.bak"
+  mv $HOME/.config/zsh $HOME/.config/zsh.bak
+fi
+
+rm -rf $HOME/.config/zsh
+ln -sf "$ZSH_CONFIG_DIR"/.config/zsh $HOME/.config/zsh
