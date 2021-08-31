@@ -7,3 +7,5 @@ elif command -v vim > /dev/null 2>&1; then
 elif command -v vi > /dev/null 2>&1; then
   export EDITOR=vi
 fi
+
+export LESS=-FiMqRX
