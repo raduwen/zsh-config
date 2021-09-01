@@ -1,3 +1,13 @@
+path=(
+  $HOME/.local/bin
+  /usr/local/bin(N-)
+  /usr/bin(N-)
+  /bin(N-)
+  /usr/local/sbin(N-)
+  /usr/sbin(N-)
+  /sbin(N-)
+)
+
 export LANG=en_US.UTF-8
 
 if command -v nvim > /dev/null 2>&1; then
