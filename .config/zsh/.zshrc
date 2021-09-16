@@ -1,3 +1,5 @@
+eval "$(anyenv init -)"
+
 if [ ! -d $XDG_DATA_HOME/zsh ]; then
   mkdir -p $XDG_DATA_HOME/zsh
 fi
