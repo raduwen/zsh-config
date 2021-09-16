@@ -1,3 +1,5 @@
+umask 002
+
 path=(
   $HOME/.local/bin
   /usr/local/bin(N-)
