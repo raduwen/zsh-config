@@ -35,6 +35,14 @@ else
   export GREP=grep
 fi
 
+if command -v exa > /dev/null 2>&1; then
+  alias ls=exa
+fi
+
+if command -v hub > /dev/null 2>&1; then
+  alias git=hub
+fi
+
 alias -g L="| less"
 alias -g B="| bat"
 alias -g G="| $GREP"
@@ -43,9 +51,10 @@ alias -g T="| tail"
 alias -g S="| sed"
 alias -g A="| awk"
 
-if command -v hub > /dev/null 2>&1; then
-  alias git=hub
-fi
+alias la='ls -a'
+alias ll='ls -l'
+alias dir='ls -la'
+
 alias g=git
 alias gs='g status'
 alias ga='g add'
