@@ -2,6 +2,7 @@ umask 002
 
 path=(
   $HOME/.local/bin
+  /opt/brew/bin(N-)
   /usr/local/bin(N-)
   /usr/bin(N-)
   /bin(N-)
